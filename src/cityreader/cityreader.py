@@ -5,6 +5,8 @@ class City:
         self.name = name
         self.lat = lat
         self.lon = lon
+    def __repr__(self):
+        return f"{self.name}, {self.lat}, {self.lon}"
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
 #
@@ -24,11 +26,11 @@ def cityreader(cities=[]):
   # For each city record, create a new City instance and add it to the 
   # `cities` list
     import csv
-    with open('cities.csv', 'r') as csvfile:
-        reader = csv.DictReader(csvfile) 
-        next(reader)
+    with open(r"C:\Users\tfikrie\Desktop\Lambda_School\ProjectExercise\CS_01\Sprint-Challenge--Intro-Python\src\cityreader\cities.csv", "r") as f:
+        reader = csv.reader(f)
+        next(reader) # skip header
         for x in reader:
-              cities = City(x)   
+            cities.append(City(x[0], x[3], x[4]))   
     return cities
 
 cityreader(cities)
