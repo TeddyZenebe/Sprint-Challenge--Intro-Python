@@ -43,7 +43,7 @@ class CityreaderTests(unittest.TestCase):
       City("Bronx", 40.8501,-73.8662),
       City("Brooklyn", 40.6501,-73.9496),
       City("Manhattan", 40.7834,-73.9662),
-      City("Philadelphia", 40.0076,-75.134),
+      City("Philadelphia", 40.0076,-75.1340),
       City("Pittsburgh", 40.4396,-79.9763),
       City("Sacramento", 38.5666,-121.4683),
       City("Riverside", 33.9382,-117.3949),
@@ -73,7 +73,7 @@ class CityreaderTests(unittest.TestCase):
       City("Detroit", 42.3834,-83.1024),
       City("Providence", 41.8229,-71.4186),
       City("Louisville", 38.1662,-85.6488),
-      City("Portland", 45.5372,-122.65)
+      City("Portland", 45.5372,-122.6500)
     ]
     
   def test_cityreader_correctness(self):
